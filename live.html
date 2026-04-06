@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ao Vivo | Valentes de Cristo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background: #050505;"> <nav class="nav nav--scrolled"> <div class="container nav__wrapper">
+            <div class="logo">VALENTES <span>LIVE</span></div>
+            <ul class="nav__list">
+                <li><a href="./index.html">Voltar para o Início</a></li>
+                <li><a href="https://youtube.com" target="_blank" class="btn--live">Canal Completo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="padding-top: 120px; padding-bottom: 80px;">
+        <section class="container">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                        <div class="pulse-icon"></div>
+                        <span style="font-weight: 700; letter-spacing: 2px; color: var(--live-red); font-size: 0.8rem;">EM TRANSMISSÃO</span>
+                    </div>
+                    <h1 style="font-family: 'Syne'; font-size: 2.5rem; text-transform: uppercase;">Celebração de Domingo</h1>
+                </div>
+                <div style="display: flex; gap: 15px;">
+                    <a href="#doar" class="btn btn--primary" style="padding: 12px 25px; font-size: 0.8rem;">Dízimos e Ofertas</a>
+                </div>
+            </div>
+
+            <div style="width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LIVE_ID" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+
+            <div class="m-grid" style="margin-top: 40px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div style="background: var(--gray); padding: 30px; border-radius: 15px; border-left: 4px solid var(--accent);">
+                    <h4 style="color: var(--white); margin-bottom: 10px; font-family: 'Syne';">Próxima Transmissão</h4>
+                    <p style="color: var(--text-dim);">Quarta-feira às 20:00h — <br><strong>Noite de Poder e Avivamento</strong></p>
+                </div>
+                
+                <div id="doar" style="background: var(--gray); padding: 30px; border-radius: 15px; border-left: 4px solid var(--live-red);">
+                    <h4 style="color: var(--white); margin-bottom: 10px; font-family: 'Syne';">Generosidade Digital</h4>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;">Contribua com a expansão do Reino via PIX:</p>
+                    <code style="display: block; margin-top: 10px; color: var(--white); background: rgba(0,0,0,0.3); padding: 10px; border-radius: 5px; text-align: center; border: 1px dashed rgba(255,255,255,0.2);">
+                        cnpj@valentes.com.br
+                    </code>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p style="font-size: 0.8rem; opacity: 0.5;">© 2026 Ministério Valentes de Cristo. Praia Grande/SP.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
