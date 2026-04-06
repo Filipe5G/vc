@@ -17,6 +17,7 @@
                 <li><a href="./index.html">Início</a></li>
                 <li><a href="./essencia.html">Nossa Essência</a></li>
                 <li><a href="./visita.html">Visite-nos</a></li>
+                <li><a href="./contato.html">Contato</a></li>
                 <li><a href="./live.html" class="btn--live">Ao Vivo</a></li>
             </ul>
 
@@ -28,57 +29,63 @@
         </div>
     </nav>
 
-    <main style="padding-top: 180px; padding-bottom: 100px;">
+    <main class="welcome-section">
         <section class="container">
-            <div class="footer__grid" style="align-items: flex-start; gap: 60px;">
+            <div class="welcome-grid">
                 
-                <div class="reveal">
-                    <span style="color: var(--accent); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 0.9rem;">Seja Bem-vindo</span>
-                    <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin: 20px 0 30px;">Tudo pronto para <br><span style="color: var(--accent);">sua chegada</span></h1>
-                    <p style="margin-bottom: 50px; color: var(--text-dim); font-size: 1.1rem; max-width: 550px;">
-                        Queremos que sua experiência seja inesquecível. Desde o estacionamento até o momento da ministração, nossa equipe está pronta para receber você e sua família.
+                <div class="welcome-content reveal">
+                    <span class="welcome-content__subtitle">Seja Bem-vindo</span>
+                    <h1 class="welcome-content__title">Tudo pronto para <br><span class="text-accent">sua chegada</span></h1>
+                    <p class="welcome-content__description">
+                        Queremos que sua experiência seja inesquecível. Desde a entrada até o momento da ministração, nossa equipe está pronta para receber você e sua família.
                     </p>
                     
-                    <h4 style="font-family: 'Syne'; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; font-size: 1rem;">Nossos Horários</h4>
-                    <div class="agenda-list" style="margin-top: 0;">
-                        <div class="agenda-item" style="padding: 25px 0;">
-                            <div class="agenda-date" style="font-size: 1.1rem; min-width: 130px; letter-spacing: 1px;">DOMINGOS</div>
-                            <div class="agenda-info">
-                                <h3 style="font-size: 1.2rem;">Culto da Família</h3>
-                                <span style="font-weight: 600;">10:00h</span>
+                    <h4 class="welcome-content__agenda-label">Nossos Horários</h4>
+                    
+                    <div class="mini-agenda">
+                        <div class="mini-agenda__item">
+                            <div class="mini-agenda__date">DOMINGOS</div>
+                            <div class="mini-agenda__info">
+                                <h3>Culto da Família</h3>
+                                <span>10:00h</span>
                             </div>
                         </div>
-                        <div class="agenda-item" style="padding: 25px 0;">
-                            <div class="agenda-date" style="font-size: 1.1rem; min-width: 130px; letter-spacing: 1px;">TERÇAS</div>
-                            <div class="agenda-info">
-                                <h3 style="font-size: 1.2rem;">Círculo de Oração</h3>
-                                <span style="font-weight: 600;">20:00h</span>
+                        
+                        <div class="mini-agenda__item">
+                            <div class="mini-agenda__date">TERÇAS</div>
+                            <div class="mini-agenda__info">
+                                <h3>Círculo de Oração</h3>
+                                <span>20:00h</span>
                             </div>
                         </div>
-                        <div class="agenda-item" style="padding: 25px 0;">
-                            <div class="agenda-date" style="font-size: 1.1rem; min-width: 130px; letter-spacing: 1px;">QUINTAS</div>
-                            <div class="agenda-info">
-                                <h3 style="font-size: 1.2rem;">Cura e Libertação</h3>
-                                <span style="font-weight: 600;">20:00h</span>
+                        
+                        <div class="mini-agenda__item">
+                            <div class="mini-agenda__date">QUINTAS</div>
+                            <div class="mini-agenda__info">
+                                <h3>Cura e Libertação</h3>
+                                <span>20:00h</span>
                             </div>
                         </div>
                     </div>
-
                 </div>
 
-                <div style="background: var(--gray); padding: 50px; border-radius: 24px; position: sticky; top: 150px; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 40px 80px rgba(0,0,0,0.4);" class="reveal">
-                    <div style="width: 50px; height: 50px; background: rgba(59, 130, 246, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: auto auto 25px auto;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                <aside class="faq-card reveal">
+                    <div class="faq-card__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
                     </div>
-                    <h3 style="font-family: 'Syne'; margin-bottom: 20px; font-size: 1.5rem;">Ainda tem dúvidas?</h3>
-                    <p style="color: var(--text-dim); margin-bottom: 35px; line-height: 1.7;">
+                    <h3 class="faq-card__title">Ainda tem dúvidas?</h3>
+                    <p class="faq-card__text">
                         Não hesite em nos contatar. Temos uma equipe de boas-vindas disponível agora para te ajudar com localização, acesso ou qualquer outra necessidade.
                     </p>
-                    <a href="https://wa.me/5513999999999" class="btn btn--primary" style="width: 100%; justify-content: center; padding: 20px;">
-                        Falar com Recepção
-                    </a>
-                    <p style="text-align: center; font-size: 0.8rem; color: var(--text-dim); margin-top: 20px; opacity: 0.6;">Resposta média: 5 minutos</p>
-                </div>
+                    <div class="faq-card__action">
+                        <a href="https://wa.me/5513999999999" class="btn btn--primary faq-card__btn">
+                            Falar com Recepção
+                        </a>
+                        <p class="faq-card__footer-text">Resposta média: 5 minutos</p>
+                    </div>
+                </aside>
 
             </div>
         </section>
