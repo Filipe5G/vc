@@ -99,6 +99,40 @@ h1, h2, .logo {
     color: var(--accent);
 }
 
+/* MELHORIA: LINK AO VIVO DESKTOP */
+.nav__list a.nav__link--live {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 18px;
+    /* Um fundo escuro sólido bem suave para separar da foto */
+    background: rgba(0, 0, 0, 0.6); 
+    /* Borda vermelha levemente mais clara para destacar o contorno */
+    border: 1px solid rgba(239, 68, 68, 0.5);
+    border-radius: 50px;
+    color: #ff5f5f; /* Um vermelho levemente mais claro para "saltar" no escuro */
+    opacity: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition-smooth);
+    /* Shadow para garantir que o texto não se misture com a imagem */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.nav__list a.nav__link--live:hover {
+    background: var(--live-red);
+    color: var(--white);
+    border-color: var(--live-red);
+    box-shadow: 0 0 25px rgba(239, 68, 68, 0.4);
+    text-shadow: none;
+}
+
+.nav__list a.nav__link--live .pulse-icon {
+    width: 8px;
+    height: 8px;
+}
+
 .nav__toggle {
     display: none;
     cursor: pointer;
@@ -734,7 +768,7 @@ h1, h2, .logo {
         right: -100%;
         width: 100%;
         height: 100vh;
-        background: rgba(10, 10, 10, 0.98); /* Fundo quase opaco para visibilidade */
+        background: rgba(10, 10, 10, 0.98); 
         backdrop-filter: blur(15px);
         flex-direction: column;
         justify-content: center;
@@ -746,12 +780,42 @@ h1, h2, .logo {
 
     .nav__list.active { right: 0; }
 
-    /* Ajuste da tipografia do menu mobile para melhorar leitura */
     .nav__list a {
         font-size: 1.5rem;
         font-family: 'Syne', sans-serif;
         text-transform: uppercase;
         letter-spacing: 2px;
+    }
+
+    /* MELHORIA: LINK AO VIVO MOBILE */
+    .nav__list a.nav__link--live {
+        /* Garante que o texto e o ícone fiquem na mesma linha */
+        display: flex !important;
+        flex-direction: row !important; 
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 12px !important;
+
+        /* Ajusta o tamanho e o espaçamento */
+        width: auto !important; /* Deixa o botão do tamanho do conteúdo */
+        min-width: 180px; /* Garante uma área de clique boa */
+        padding: 12px 24px !important;
+        margin: 0 auto; /* Centraliza o botão no menu */
+        
+        /* Estética */
+        font-size: 1.1rem !important;
+        white-space: nowrap !important; /* Impede a quebra de linha */
+        border-radius: 50px !important; /* Deixa ele arredondado e elegante */
+        background: var(--live-red) !important;
+        box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
+    }
+
+    /* Ajuste do ícone para não sumir no mobile */
+    .nav__list a.nav__link--live .pulse-icon {
+        display: inline-block !important;
+        width: 10px !important;
+        height: 10px !important;
+        margin: 0;
     }
 
     .nav__toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
