@@ -376,3 +376,76 @@ h1, h2, .logo {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ==========================================================================
+   MENU MOBILE (ESTRUTURA)
+   ========================================================================== */
+.nav__toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 1001;
+}
+
+.nav__toggle span {
+    width: 30px;
+    height: 2px;
+    background-color: var(--white);
+    transition: var(--transition-smooth);
+}
+
+@media (max-width: 768px) {
+    .nav__toggle { display: flex; }
+
+    .nav__list {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Escondido fora da tela */
+        width: 80%;
+        height: 100vh;
+        background: var(--bg);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        border-left: 1px solid rgba(255,255,255,0.05);
+        box-shadow: -20px 0 40px rgba(0,0,0,0.5);
+    }
+
+    .nav__list.active {
+        right: 0; /* Desliza para dentro */
+    }
+
+    /* Animação do Hambúrguer para X */
+    .nav__toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .nav__toggle.active span:nth-child(2) { opacity: 0; }
+    .nav__toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+@media (max-width: 768px) {
+    /* Garante que a lista exista e seja flexível quando ativa */
+    .nav__list {
+        display: flex !important; /* Força o flex que o navegador pode estar omitindo */
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%; /* Ocupar a tela toda ajuda no mobile */
+        height: 100vh;
+        background: #0a0a0a; /* Cor sólida para não ficar transparente */
+        z-index: 999; /* Abaixo apenas do botão toggle */
+        transition: right 0.4s ease-in-out;
+    }
+
+    .nav__list.active {
+        right: 0;
+    }
+
+    /* O botão Hambúrguer precisa estar ACIMA de tudo */
+    .nav__toggle {
+        display: flex !important;
+        position: relative;
+        z-index: 1001; 
+    }
+}

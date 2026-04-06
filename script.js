@@ -25,3 +25,25 @@ const revealOnScroll = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 document.querySelectorAll('.reveal').forEach(el => revealOnScroll.observe(el));
+
+
+const navToggle = document.getElementById('nav-toggle');
+const navList = document.getElementById('nav-list');
+
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('active');
+        navList.classList.toggle('active');
+        // Bloqueia o scroll do corpo quando o menu está aberto
+        document.body.style.overflow = navList.classList.contains('active') ? 'hidden' : 'auto';
+    });
+}
+
+// Fechar menu ao clicar em um link (importante para One Page)
+document.querySelectorAll('.nav__list a').forEach(link => {
+    link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navList.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+});
