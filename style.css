@@ -151,7 +151,6 @@ h1, h2, .logo {
 /* --- ESTADO ATIVO DO MENU --- */
 .nav__list a.active {
     opacity: 1;
-    color: var(--accent);
     position: relative;
 }
 
@@ -162,7 +161,6 @@ h1, h2, .logo {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--accent);
 }
 
 /* --- COMPONENTES: BOTÕES & ICONES --- */
@@ -590,7 +588,7 @@ h1, h2, .logo {
 }
 
 .form-textarea {
-    resize: vertical;
+    resize: none;
     min-height: 150px;
 }
 
